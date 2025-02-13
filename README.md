@@ -11,8 +11,7 @@
 
 Este proyecto administra la documentación de la solución, está organizada de la siguiente manera:
 
-- Arquitectura
-- Manuales
+- Arquitectura 
 - Postman
 
 ----------
