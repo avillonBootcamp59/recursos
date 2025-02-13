@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "67ab634131c418764ebfb067"
+  },
+  "name": "Juan Diego Perez",
+  "type": "personal",
+  "numberDocument": "12345678",
+  "email": "juan.perez@gmail.com",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67ab649b31c418764ebfb068"
+  },
+  "name": "Juan Diego Villon",
+  "type": "personal",
+  "numberDocument": "66543456",
+  "email": "jd@gmail.com",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67ab64da31c418764ebfb069"
+  },
+  "name": "Alicia Villon",
+  "type": "personal",
+  "numberDocument": "44960406",
+  "email": "villonalicia@gmail.com",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67ac8bc514334b06ea232968"
+  },
+  "name": "Alicia Villon SAC",
+  "type": "empresarial",
+  "numberDocument": "10449604062",
+  "email": "villonalicia@gmail.com",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+}]

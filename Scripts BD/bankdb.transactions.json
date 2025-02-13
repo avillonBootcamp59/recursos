@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "67aba07559f215343e30f346"
+  },
+  "accountId": "67ab80273ba7007fd1e9e395",
+  "type": "deposito",
+  "amount": 500,
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67adc697c74d07581e7d8533"
+  },
+  "accountId": "67ad83f89af21c47d5b067a8",
+  "type": "DEPOSITO",
+  "amount": 500,
+  "date": {
+    "$date": "2025-02-13T10:16:55.715Z"
+  },
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67adc6a6c74d07581e7d8534"
+  },
+  "accountId": "67ad83f89af21c47d5b067a8",
+  "type": "DEPOSITO",
+  "amount": 500,
+  "date": {
+    "$date": "2025-02-13T10:17:10.135Z"
+  },
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67adcb86c74d07581e7d8535"
+  },
+  "accountId": "67ad83f89af21c47d5b067a8",
+  "type": "DEPOSITO",
+  "amount": 500,
+  "date": {
+    "$date": "2025-02-13T10:37:58.293Z"
+  },
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+}]

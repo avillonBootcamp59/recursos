@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67ad83f89af21c47d5b067a8"
+  },
+  "number": "123-444-333-2222",
+  "type": "AHORRO",
+  "customerId": "67ab649b31c418764ebfb068",
+  "balance": 4400,
+  "hasMaintenanceFee": false,
+  "transactionLimit": 10,
+  "_class": "proyecto1.msaccounts.entity.Account"
+},
+{
+  "_id": {
+    "$oid": "67ad8ecc9af21c47d5b067a9"
+  },
+  "number": "123-444-333-2224",
+  "type": "CUENTA CORRIENTE",
+  "customerId": "67ab649b31c418764ebfb068",
+  "balance": 5000,
+  "hasMaintenanceFee": false,
+  "transactionLimit": 10,
+  "_class": "proyecto1.msaccounts.entity.Account"
+},
+{
+  "_id": {
+    "$oid": "67ad90c4f9ffbb058d93fa53"
+  },
+  "number": "123-444-333-2229",
+  "type": "PLAZO_FIJO",
+  "customerId": "67ab64da31c418764ebfb069",
+  "balance": 5000,
+  "hasMaintenanceFee": false,
+  "transactionLimit": 10,
+  "_class": "proyecto1.msaccounts.entity.Account"
+},
+{
+  "_id": {
+    "$oid": "67ad91adeb700f0a9d1a4311"
+  },
+  "number": "0986-444-333-2227",
+  "type": "CORRIENTE",
+  "customerId": "67ac8bc514334b06ea232968",
+  "balance": 65000,
+  "hasMaintenanceFee": false,
+  "transactionLimit": 10,
+  "_class": "proyecto1.msaccounts.entity.Account"
+}]

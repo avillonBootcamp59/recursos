@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "67ab97f6a3e17821b3859976"
+  },
+  "customerId": "67ab634131c418764ebfb067",
+  "amount": 15000,
+  "creditType": "personal",
+  "interestRate": 5.5,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67ad9c30393dff776ad7fb21"
+  },
+  "customerId": "67ab649b31c418764ebfb068",
+  "amount": 15000,
+  "creditType": "personal",
+  "interestRate": 5.5,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67ada381c79d320fa2b4e072"
+  },
+  "customerId": "67ac8bc514334b06ea232968",
+  "amount": 90000,
+  "creditType": "empresarial",
+  "interestRate": 7.5,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67ada38cc79d320fa2b4e073"
+  },
+  "customerId": "67ac8bc514334b06ea232968",
+  "amount": 5000,
+  "creditType": "empresarial",
+  "interestRate": 7.5,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67adbd87c79d320fa2b4e074"
+  },
+  "customerId": "67ac8bc514334b06ea232968",
+  "amount": 5000,
+  "creditType": "empresarial",
+  "interestRate": 7.5,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67adbe8594103a3091f481d9"
+  },
+  "customerId": "67ac8bc514334b06ea232968",
+  "amount": 5000,
+  "creditType": "empresarial",
+  "interestRate": 7.5,
+  "creditLimit": 6000,
+  "currentDebt": 4000,
+  "availableLimit": 500,
+  "_class": "proyecto1.mscredit.entity.Credit"
+}]
