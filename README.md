@@ -1,14 +1,25 @@
 # recursos
 
-###Descripción
-Este proyecto administra la documentación de la solución, está organizada de la siguiente manera:
+### Contenido
+- [Descripcion](#descripcion)
+- [Instalacion](#instalacion) 
 
-•	Arquitectura
-•	Postman
 ----------
 <div id='descripcion'/>
-  
-###Instalacion
-•	Clonar este repositorio
-•	Los archivos .drawio, debe ser importado en https://app.diagrams.net/
-•	Los archivos de collections Postman deben ser importados en Postman
+
+### Descripcion
+
+Este proyecto administra la documentación de la solución, está organizada de la siguiente manera:
+
+- Arquitectura
+- Manuales
+- Postman
+
+----------
+<div id='instalacion'/>
+
+### Instalacion
+
+- Clonar este repositorio
+- Solo para de los archivos .drawio, este debe ser importado en https://app.diagrams.net/
+- Solo para el caso de las collections Postman deben ser importados en Postman
