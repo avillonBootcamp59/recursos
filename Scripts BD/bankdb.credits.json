@@ -16,6 +16,13 @@
   "amount": 15000,
   "creditType": "personal",
   "interestRate": 5.5,
+  "creditLimit": 5000,
+  "currentDebt": 800,
+  "availableLimit": 1000,
+  "dueDate": {
+    "$date": "2025-01-02T05:00:00.000Z"
+  },
+  "outstandingAmount": 567,
   "_class": "proyecto1.mscredit.entity.Credit"
 },
 {
@@ -34,8 +41,11 @@
   },
   "customerId": "67ac8bc514334b06ea232968",
   "amount": 5000,
-  "creditType": "empresarial",
+  "type": "Personal",
   "interestRate": 7.5,
+  "creditLimit": 500,
+  "currentDebt": 100,
+  "availableLimit": 100,
   "_class": "proyecto1.mscredit.entity.Credit"
 },
 {
@@ -54,10 +64,83 @@
   },
   "customerId": "67ac8bc514334b06ea232968",
   "amount": 5000,
-  "creditType": "empresarial",
+  "type": "Empresarial",
   "interestRate": 7.5,
   "creditLimit": 6000,
   "currentDebt": 4000,
   "availableLimit": 500,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67b51696937aa93351a8b74d"
+  },
+  "customerId": "67ac8bc514334b06ea232968",
+  "amount": 15000,
+  "creditType": "AHORRO",
+  "interestRate": 5.5,
+  "creditLimit": 5000,
+  "currentDebt": 200,
+  "availableLimit": 100,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67b519ea937aa93351a8b74e"
+  },
+  "customerId": "67ac8bc514334b06ea232968",
+  "amount": 15000,
+  "creditType": "AHORRO",
+  "interestRate": 5.5,
+  "creditLimit": 5000,
+  "currentDebt": 200,
+  "availableLimit": 100,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67b51ad2937aa93351a8b74f"
+  },
+  "customerId": "67b4bacba0b2356cb7b79845",
+  "amount": 15000,
+  "creditType": "AHORRO",
+  "interestRate": 5.5,
+  "creditLimit": 5000,
+  "currentDebt": 800,
+  "availableLimit": 1000,
+  "dueDate": {
+    "$date": "2025-01-02T05:00:00.000Z"
+  },
+  "outstandingAmount": 567,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67b51b4b937aa93351a8b750"
+  },
+  "customerId": "67b4bacba0b2356cb7b79845",
+  "amount": 15000,
+  "creditType": "PERSONAL",
+  "interestRate": 5.5,
+  "creditLimit": 5000,
+  "currentDebt": 800,
+  "availableLimit": 1000,
+  "dueDate": {
+    "$date": "2025-01-02T05:00:00.000Z"
+  },
+  "outstandingAmount": 567,
+  "_class": "proyecto1.mscredit.entity.Credit"
+},
+{
+  "_id": {
+    "$oid": "67be52c6e0e34462ed5d9b9d"
+  },
+  "customerId": "67b4bacba0b2356cb7b79845",
+  "amount": 15000,
+  "creditType": "TARJETA_CREDITO",
+  "interestRate": 5.5,
+  "creditLimit": 5000,
+  "currentDebt": 200,
+  "availableLimit": 100,
   "_class": "proyecto1.mscredit.entity.Credit"
 }]

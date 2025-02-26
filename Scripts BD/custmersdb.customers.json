@@ -1,21 +1,12 @@
 [{
   "_id": {
-    "$oid": "67ab634131c418764ebfb067"
-  },
-  "name": "Juan Diego Perez",
-  "type": "personal",
-  "numberDocument": "12345678",
-  "email": "juan.perez@gmail.com",
-  "_class": "proyecto1.mscustomer.entity.Customer"
-},
-{
-  "_id": {
     "$oid": "67ab649b31c418764ebfb068"
   },
   "name": "Juan Diego Villon",
-  "type": "personal",
+  "type": "PERSONAL",
   "numberDocument": "66543456",
   "email": "jd@gmail.com",
+  "profile": "VIP",
   "_class": "proyecto1.mscustomer.entity.Customer"
 },
 {
@@ -23,9 +14,10 @@
     "$oid": "67ab64da31c418764ebfb069"
   },
   "name": "Alicia Villon",
-  "type": "personal",
+  "type": "PERSONAL",
   "numberDocument": "44960406",
   "email": "villonalicia@gmail.com",
+  "profile": "SIMPLE",
   "_class": "proyecto1.mscustomer.entity.Customer"
 },
 {
@@ -33,8 +25,64 @@
     "$oid": "67ac8bc514334b06ea232968"
   },
   "name": "Alicia Villon SAC",
-  "type": "empresarial",
+  "type": "EMPRESARIAL",
   "numberDocument": "10449604062",
   "email": "villonalicia@gmail.com",
+  "profile": "PYME",
   "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67b4bacba0b2356cb7b79845"
+  },
+  "name": "TAMARINDO S.A.C.",
+  "type": "EMPRESARIAL",
+  "numberDocument": "22398765412",
+  "email": "tamarindo@gmail.com",
+  "profile": "PYME",
+  "_class": "com.bank.mscustomer.entity.CustomerEntity"
+},
+{
+  "_id": {
+    "$oid": "67b5170ca0b2356cb7b79846"
+  },
+  "name": "Daniel Gutierrez Sanchez",
+  "type": "PERSONAL",
+  "numberDocument": "34567891",
+  "email": "jd@gmail.com",
+  "profile": "VIP",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67b7a8b8bc7425468a99fa38"
+  },
+  "name": "Jose Manuel Villar Barreto",
+  "type": "PERSONAL",
+  "numberDocument": "99887654",
+  "email": "villonalicia@gmail.com",
+  "profile": "SIMPLE",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67b7e22a5e0b3a7c35356b58"
+  },
+  "name": "Edgar Manuel Villar",
+  "type": "PERSONAL",
+  "numberDocument": "09387654",
+  "email": "villonalicia@gmail.com",
+  "profile": "SIMPLE",
+  "_class": "proyecto1.mscustomer.entity.Customer"
+},
+{
+  "_id": {
+    "$oid": "67bd950cd339ac13c34725cf"
+  },
+  "name": "INC Edgar Manuel Villar",
+  "type": "EMPRESARIAL",
+  "numberDocument": "10987625431",
+  "email": "villonalicia@gmail.com",
+  "profile": "SIMPLE",
+  "_class": "com.bank.mscustomer.entity.CustomerEntity"
 }]

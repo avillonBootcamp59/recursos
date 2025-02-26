@@ -42,4 +42,93 @@
     "$date": "2025-02-13T10:37:58.293Z"
   },
   "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b53d409a1d4f5ba61649a7"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "RETIRO",
+  "amount": 500,
+  "date": {
+    "$date": "2025-02-19T02:09:04.002Z"
+  },
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b53d739a1d4f5ba61649a8"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "DEPOSITO",
+  "amount": 1500,
+  "date": {
+    "$date": "2025-02-19T02:09:55.209Z"
+  },
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b5471be4cbd50b32bf79fd"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "DEPOSITO",
+  "amount": 100,
+  "date": {
+    "$date": "2025-02-19T02:51:07.305Z"
+  },
+  "fee": 0,
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b5472be4cbd50b32bf79fe"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "RETIRO",
+  "amount": 10,
+  "date": {
+    "$date": "2025-02-19T02:51:23.114Z"
+  },
+  "fee": 0,
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b54747e4cbd50b32bf79ff"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "RETIRO",
+  "amount": 10,
+  "date": {
+    "$date": "2025-02-19T02:51:51.959Z"
+  },
+  "fee": 0,
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b54748e4cbd50b32bf7a00"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "RETIRO",
+  "amount": 10,
+  "date": {
+    "$date": "2025-02-19T02:51:52.822Z"
+  },
+  "fee": 5,
+  "_class": "proyecto1.mstransactions.entity.Transaction"
+},
+{
+  "_id": {
+    "$oid": "67b54749e4cbd50b32bf7a01"
+  },
+  "accountId": "67b52b6eed4e923e9c20ed13",
+  "type": "RETIRO",
+  "amount": 10,
+  "date": {
+    "$date": "2025-02-19T02:51:53.855Z"
+  },
+  "fee": 5,
+  "_class": "proyecto1.mstransactions.entity.Transaction"
 }]

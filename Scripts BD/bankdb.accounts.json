@@ -1,48 +1,83 @@
 [{
   "_id": {
-    "$oid": "67ad83f89af21c47d5b067a8"
+    "$oid": "67b477374895252725be1b83"
   },
-  "number": "123-444-333-2222",
-  "type": "AHORRO",
-  "customerId": "67ab649b31c418764ebfb068",
-  "balance": 4400,
-  "hasMaintenanceFee": false,
-  "transactionLimit": 10,
-  "_class": "proyecto1.msaccounts.entity.Account"
-},
-{
-  "_id": {
-    "$oid": "67ad8ecc9af21c47d5b067a9"
-  },
-  "number": "123-444-333-2224",
-  "type": "CUENTA CORRIENTE",
-  "customerId": "67ab649b31c418764ebfb068",
-  "balance": 5000,
-  "hasMaintenanceFee": false,
-  "transactionLimit": 10,
-  "_class": "proyecto1.msaccounts.entity.Account"
-},
-{
-  "_id": {
-    "$oid": "67ad90c4f9ffbb058d93fa53"
-  },
-  "number": "123-444-333-2229",
+  "number": "123-444-333-2200",
   "type": "PLAZO_FIJO",
-  "customerId": "67ab64da31c418764ebfb069",
+  "customerId": "67ab634131c418764ebfb067",
   "balance": 5000,
   "hasMaintenanceFee": false,
-  "transactionLimit": 10,
+  "transactionLimit": 5,
   "_class": "proyecto1.msaccounts.entity.Account"
 },
 {
   "_id": {
-    "$oid": "67ad91adeb700f0a9d1a4311"
+    "$oid": "67b477ea4895252725be1b84"
   },
-  "number": "0986-444-333-2227",
+  "number": "123-444-333-5500",
   "type": "CORRIENTE",
   "customerId": "67ac8bc514334b06ea232968",
-  "balance": 65000,
+  "balance": 5000,
   "hasMaintenanceFee": false,
-  "transactionLimit": 10,
+  "transactionLimit": 5,
+  "_class": "proyecto1.msaccounts.entity.Account"
+},
+{
+  "_id": {
+    "$oid": "67b477f54895252725be1b85"
+  },
+  "number": "123-444-333-2200",
+  "type": "CORRIENTE",
+  "customerId": "67ac8bc514334b06ea232968",
+  "balance": 5000,
+  "hasMaintenanceFee": false,
+  "transactionLimit": 5,
+  "_class": "proyecto1.msaccounts.entity.Account"
+},
+{
+  "_id": {
+    "$oid": "67b518b34886d3398bbede90"
+  },
+  "number": "123-444-333-2222",
+  "type": "CORRIENTE",
+  "customerId": "67b4bacba0b2356cb7b79845",
+  "balance": 4450,
+  "hasMaintenanceFee": false,
+  "transactionLimit": 5,
+  "authorizedSigners": [
+    "001",
+    "111"
+  ],
+  "_class": "proyecto1.msaccounts.entity.Account"
+},
+{
+  "_id": {
+    "$oid": "67b51b524886d3398bbede91"
+  },
+  "number": "9987-444-333-2222",
+  "type": "CORRIENTE",
+  "customerId": "67b4bacba0b2356cb7b79845",
+  "balance": 5550,
+  "hasMaintenanceFee": true,
+  "transactionLimit": 5,
+  "_class": "proyecto1.msaccounts.entity.Account",
+  " lastTransactionDate 2025-02-11T00:53:01.586+00:00": ""
+},
+{
+  "_id": {
+    "$oid": "67b52b6eed4e923e9c20ed13"
+  },
+  "number": "0009-444-333-2222",
+  "type": "CORRIENTE",
+  "customerId": "67b4bacba0b2356cb7b79845",
+  "balance": 5550,
+  "hasMaintenanceFee": true,
+  "transactionLimit": 5,
+  "commissionFee": 5,
+  "minimumOpeningBalance": 100,
+  "lastTransactionDate": {
+    "$date": "2025-02-19T00:53:01.586Z"
+  },
+  "freeTransactions": 3,
   "_class": "proyecto1.msaccounts.entity.Account"
 }]
