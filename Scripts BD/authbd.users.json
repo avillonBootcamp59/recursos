@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "67c94228a77307486662497a"
+  },
+  "username": "admin",
+  "password": "O7VIDyt2vuWlEcPQa05kug==",
+  "role": "USER",
+  "_class": "com.bank.pe.msauthentication.entity.UserEntity"
+},
+{
+  "_id": {
+    "$oid": "67c942e152ca7c1454288fb9"
+  },
+  "username": "avillon",
+  "password": "ytuAnDgajZTmLJZCgGJ48A==",
+  "role": "USER",
+  "_class": "com.bank.pe.msauthentication.entity.UserEntity"
+},
+{
+  "_id": {
+    "$oid": "67c9431252ca7c1454288fba"
+  },
+  "username": "avillonc",
+  "password": "ytuAnDgajZTmLJZCgGJ48A==",
+  "role": "USER",
+  "_class": "com.bank.pe.msauthentication.entity.UserEntity"
+}]
