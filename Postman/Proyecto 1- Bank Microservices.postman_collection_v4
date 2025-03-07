@@ -1465,6 +1465,106 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "ms-yanki",
+			"item": [
+				{
+					"name": "Create account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n  \"documentType\": \"DNI\",\r\n  \"documentNumber\": \"44960406\",\r\n  \"phoneNumber\": \"931387244\",\r\n  \"imei\": \"123456789012345\",\r\n  \"email\": \"avillonc@gmail.com\",\r\n  \"debitCard\": \"2205-5678-9012-3456\",\r\n  \"balance\": 5000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/v1/yanki/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"v1",
+								"yanki",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account by Phone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/v1/yanki/phone?phone=931378244",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"v1",
+								"yanki",
+								"phone"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "931378244"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send money",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/v1/yanki/transfer?senderPhone=931387244&receiverPhone=999875478&amount=50.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"v1",
+								"yanki",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "senderPhone",
+									"value": "931387244"
+								},
+								{
+									"key": "receiverPhone",
+									"value": "999875478"
+								},
+								{
+									"key": "amount",
+									"value": "50.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
