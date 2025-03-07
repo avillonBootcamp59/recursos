@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "67ca65db1fc863b3f21f4c42"
+  },
+  "documentType": "DNI",
+  "documentNumber": "44960406",
+  "phoneNumber": "931387244",
+  "imei": "123456789012345",
+  "email": "avillonc@gmail.com",
+  "debitCard": "2205-5678-9012-3456",
+  "balance": 5000
+},
+{
+  "_id": {
+    "$oid": "67ca72ca1fc863b3f21f4c46"
+  },
+  "documentType": "DNI",
+  "documentNumber": "25541850",
+  "phoneNumber": "999875478",
+  "imei": "100456789033364",
+  "email": "maria@gmail.com",
+  "debitCard": "1234-5678-9012-2200",
+  "balance": 1000
+}]
