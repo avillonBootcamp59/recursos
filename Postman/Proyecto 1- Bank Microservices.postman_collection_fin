@@ -1,0 +1,1860 @@
+{
+	"info": {
+		"_postman_id": "83ac2cea-ad06-48b1-90bf-37af7efc9aeb",
+		"name": "Proyecto 1- Bank Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6484423"
+	},
+	"item": [
+		{
+			"name": "ms-accounts",
+			"item": [
+				{
+					"name": "All Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account by Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/byNumber/123-444-333-2222",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"byNumber",
+								"123-444-333-2222"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"number\": \"0009-444-333-2222\",\n        \"type\": \"CORRIENTE\",\n        \"customerId\": \"67b4bacba0b2356cb7b79845\",\n        \"balance\": 5550.0,\n        \"hasMaintenanceFee\": true,\n        \"transactionLimit\": 5,\n        \"authorizedSigners\": null,\n        \"commissionFee\": null,\n        \"minimumOpeningBalance\": null, \n        \"freeTransactions\": null,\n        \"transactionCount\": null\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account HasOverdueDebt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n         \"number\": \"8877-444-333-2222\",\n        \"type\": \"CORRIENTE\",\n        \"customerId\": \"67b4bacba0b2356cb7b79845\",\n        \"balance\": 5550.0,\n        \"hasMaintenanceFee\": true,\n        \"transactionLimit\": 5,\n        \"authorizedSigners\": null,\n        \"commissionFee\": 0,\n        \"minimumOpeningBalance\": 0, \n        \"freeTransactions\": 8,\n        \"transactionCount\": 0\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"67b52b6eed4e923e9c20ed13\",\r\n        \"number\": \"0009-444-333-2222\",\r\n        \"type\": \"CORRIENTE\",\r\n        \"customerId\": \"67b4bacba0b2356cb7b79845\",\r\n        \"balance\": 5550.0,\r\n        \"hasMaintenanceFee\": true,\r\n        \"transactionLimit\": 5,\r\n        \"authorizedSigners\": null,\r\n        \"commissionFee\": 5,\r\n        \"minimumOpeningBalance\": 100,\r\n        \"lastTransactionDate\": \"2025-02-18T19:53:01.586\",\r\n        \"freeTransactions\": 3,\r\n        \"transactionCount\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/67b52b6eed4e923e9c20ed13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"67b52b6eed4e923e9c20ed13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/67b470a14011013028cd8888",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"67b470a14011013028cd8888"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/67ac8bc514334b06ea232968",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"67ac8bc514334b06ea232968"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Account by CustomerId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/customer/67b4bacba0b2356cb7b79845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"customer",
+								"67b4bacba0b2356cb7b79845"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report daily balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/report/daily-balance/67b4bacba0b2356cb7b79845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"report",
+								"daily-balance",
+								"67b4bacba0b2356cb7b79845"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report commissions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/report/commissions?startDate=2025-02-01&endDate=2025-02-28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"report",
+								"commissions"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-02-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-02-28"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-credits",
+			"item": [
+				{
+					"name": "All Credits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/v1/credits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Credit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"customerId\": \"67b4bacba0b2356cb7b79845\",\n        \"amount\": 15000.0,\n        \"creditType\": \"TARJETA_CREDITO\",\n        \"interestRate\": 5.5,\n        \"creditLimit\": 5000,\n        \"currentDebt\": 200,\n        \"availableLimit\": 100\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/v1.0/credits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"v1.0",
+								"credits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credit by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/v1.0/credits/67ada326c79d320fa2b4e071",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"v1.0",
+								"credits",
+								"67ada326c79d320fa2b4e071"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Amount Credit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"67b51b4b937aa93351a8b750\",\r\n        \"customerId\": \"67b4bacba0b2356cb7b79845\",\r\n        \"amount\": 15000.0,\r\n        \"creditType\": \"PERSONAL\",\r\n        \"interestRate\": 5.5,\r\n        \"creditLimit\": 5000,\r\n        \"currentDebt\": 800,\r\n        \"availableLimit\": 1000,\r\n        \"dueDate\": \"2025-01-02\",\r\n        \"outstandingAmount\": 567\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/v1.0/credits/67b51b4b937aa93351a8b750",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"v1.0",
+								"credits",
+								"67b51b4b937aa93351a8b750"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Credit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/v1.0/credits/67ada326c79d320fa2b4e071",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"v1.0",
+								"credits",
+								"67ada326c79d320fa2b4e071"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Credits by CustomerId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/v1.0/credits/customer/67b4bacba0b2356cb7b79845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"v1.0",
+								"credits",
+								"customer",
+								"67b4bacba0b2356cb7b79845"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fromAccountId\": \"67b518b34886d3398bbede90\",\r\n    \"toAccountId\": \"67b51b524886d3398bbede91\",\r\n    \"amount\": 500\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1.0/accounts/transfer?fromAccountId=67b518b34886d3398bbede90&toAccountId=67b51b524886d3398bbede91&amount=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1.0",
+								"accounts",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "fromAccountId",
+									"value": "67b518b34886d3398bbede90"
+								},
+								{
+									"key": "toAccountId",
+									"value": "67b51b524886d3398bbede91"
+								},
+								{
+									"key": "amount",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-transactions",
+			"item": [
+				{
+					"name": "All Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/v1.0/transactions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"v1.0",
+								"transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"RETIRO\",\n    \"accountId\": \"67b52b6eed4e923e9c20ed13\",\n    \"amount\": 10.0\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8084/v1.0/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"v1.0",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transactions by Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/v1.0/transactions/67b52b6eed4e923e9c20ed13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"v1.0",
+								"transactions",
+								"67b52b6eed4e923e9c20ed13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count Transaction by Account Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/v1.0/transactions/count/67b52b6eed4e923e9c20ed13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"v1.0",
+								"transactions",
+								"count",
+								"67b52b6eed4e923e9c20ed13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-customers",
+			"item": [
+				{
+					"name": "All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/customers/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0NDk2MDQwNiIsImlhdCI6MTc0MTY0MTQ4MiwiZXhwIjoxNzQxNjQ1MDgyfQ.4w24udCwtcsGlwDXmf-NyZxuUvniL1gtpLwxFMEXWEA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {   \r\n        \"name\": \"ALICIA VILLON \",\r\n        \"type\": \"EMPRESARIAL\",\r\n        \"numberDocument\": \"2025478968\",\r\n        \"email\": \"manzana@gmail.com\",\r\n        \"profile\": \"SIMPLE\"\r\n    } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/customers/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/v1.0/customers/67b4bacba0b2356cb7b79845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1.0",
+								"customers",
+								"67b4bacba0b2356cb7b79845"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n            \"id\": \"67b4bacba0b2356cb7b79845\",\r\n            \"name\": \"TAMARINDO S.A.C.\",\r\n            \"type\": \"EMPRESARIAL\",\r\n            \"numberDocument\": \"22398765412\",\r\n            \"email\": \"tamarindo@gmail.com\",\r\n            \"profile\": \"PYME\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/v1.0/customers/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1.0",
+								"customers",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/v1.0/customers/delete/67bdfe2c04f65d7928d17ec8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1.0",
+								"customers",
+								"delete",
+								"67bdfe2c04f65d7928d17ec8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/v1.0/customers/summary/67b4bacba0b2356cb7b79845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"v1.0",
+								"customers",
+								"summary",
+								"67b4bacba0b2356cb7b79845"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orquestador-gateway",
+			"item": [
+				{
+					"name": "ms-customers",
+					"item": [
+						{
+							"name": "All Customers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0NDk2MDQwNiIsImlhdCI6MTc0MTYzNDc2OCwiZXhwIjoxNzQxNjM4MzY4fQ.1-caYYEPQyVNBJAB0R9tRWqRyQv4scx04dNnS0YGReY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n\"name\": \"Alicia Villon\", \r\n\"type\": \"personal\", \r\n\"numberDocument\": \"44960406\", \r\n\"email\": \"villonalicia@gmail.com\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1.0/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Customer by ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0NDk2MDQwNiIsImlhdCI6MTc0MTY0MTQ4MiwiZXhwIjoxNzQxNjQ1MDgyfQ.4w24udCwtcsGlwDXmf-NyZxuUvniL1gtpLwxFMEXWEA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/customers/getById/67c95559c1e4743e000b9b55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										"getById",
+										"67c95559c1e4743e000b9b55"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Customer",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"name\": \"Juan Diego Perez\",\r\n    \"type\": \"personal\",\r\n    \"numberDocument\": \"12345678\",\r\n    \"email\": \"juan.perez@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1.0/customers/67ab634131c418764ebfb067",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"customers",
+										"67ab634131c418764ebfb067"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Customer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/customers/67a9b5be663b4731a3088ea7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"customers",
+										"67a9b5be663b4731a3088ea7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-accounts",
+					"item": [
+						{
+							"name": "All Accounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Account by Number",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/accounts/123-444-333-2222",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"accounts",
+										"123-444-333-2222"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Account",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"number\": \"0986-444-333-2227\",\n        \"type\": \"CORRIENTE\",\n        \"customerId\": \"67ac8bc514334b06ea232968\",\n        \"balance\": 65000.0,\n        \"hasMaintenanceFee\": false,\n        \"transactionLimit\": 10,\n        \"authorizedSigners\": null\n    }"
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1.0/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Account",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/accounts/67ad8ed29af21c47d5b067aa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"accounts",
+										"67ad8ed29af21c47d5b067aa"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-credits",
+					"item": [
+						{
+							"name": "All Credits",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0NDk2MDQwNiIsImlhdCI6MTc0MTYzNDc2OCwiZXhwIjoxNzQxNjM4MzY4fQ.1-caYYEPQyVNBJAB0R9tRWqRyQv4scx04dNnS0YGReY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/credits",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"credits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Credit",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0NDk2MDQwNiIsImlhdCI6MTc0MTY0MTQ4MiwiZXhwIjoxNzQxNjQ1MDgyfQ.4w24udCwtcsGlwDXmf-NyZxuUvniL1gtpLwxFMEXWEA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"customerId\": \"67cf5882b9b28459106c7f03\",\n  \"amount\": 15000.00,\n  \"creditType\": \"personal\",\n  \"interestRate\": 5.5\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/credits",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"credits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Credit by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/credits/67ada326c79d320fa2b4e071",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"credits",
+										"67ada326c79d320fa2b4e071"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Amount Credit",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "14000",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1.0/credits/67ada326c79d320fa2b4e071",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"credits",
+										"67ada326c79d320fa2b4e071"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Credit",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/credits/67ada326c79d320fa2b4e071",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"credits",
+										"67ada326c79d320fa2b4e071"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-transactions",
+					"item": [
+						{
+							"name": "Transactions by Account",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/transactions/67ab80273ba7007fd1e9e395",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"transactions",
+										"67ab80273ba7007fd1e9e395"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Transaction",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"DEPOSITO\",\n    \"accountId\": \"67ad83f89af21c47d5b067a8\",\n    \"amount\": 500.0\n}\n"
+								},
+								"url": {
+									"raw": "http://localhost:8080/v1.0/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Transactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v1.0/transactions/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v1.0",
+										"transactions",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-authentication",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"avillon123\",\r\n    \"password\": \"123456ABC\" ,\r\n    \"role\": \"ADMIN\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											" "
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"44960406\",\r\n    \"password\": \"44960406JDa\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actuator",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "actuator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/gateway/routes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"gateway",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "config-server",
+			"item": [
+				{
+					"name": "actuator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/actuator/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "default",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "4v1ll0nJd",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "avillon",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/ms-gateway/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"ms-gateway",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-report",
+			"item": [
+				{
+					"name": "Bank Product Report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/v1.0/reports/bank-products?startDate=2025-01-01&endDate=2025-02-28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1.0",
+								"reports",
+								"bank-products"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-02-28"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"avillonc\",\r\n    \"password\": \"44960406JD\" ,\r\n    \"role\": \"ADMIN\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"avillonc\",\r\n    \"password\": \"44960406JD\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8088/actuator/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-yanki",
+			"item": [
+				{
+					"name": "Create account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n  \"documentType\": \"DNI\",\r\n  \"documentNumber\": \"44960406\",\r\n  \"phoneNumber\": \"931387244\",\r\n  \"imei\": \"123456789012345\",\r\n  \"email\": \"avillonc@gmail.com\",\r\n  \"debitCard\": \"2205-5678-9012-3456\",\r\n  \"balance\": 5000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/v1/yanki/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"v1",
+								"yanki",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account by Phone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/v1/yanki/phone?phone=931378244",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"v1",
+								"yanki",
+								"phone"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "931378244"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send money",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/v1/yanki/transfer?senderPhone=931387244&receiverPhone=999875478&amount=50.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"v1",
+								"yanki",
+								"transfer"
+							],
+							"query": [
+								{
+									"key": "senderPhone",
+									"value": "931387244"
+								},
+								{
+									"key": "receiverPhone",
+									"value": "999875478"
+								},
+								{
+									"key": "amount",
+									"value": "50.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bootcoin",
+			"item": [
+				{
+					"name": "tasas",
+					"item": [
+						{
+							"name": "Listar TASAS BC",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/api/v1/rates/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"v1",
+										"rates",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear tasas BC",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tipoCambio\":3.60,\r\n    \"tipo\":\"COMPRA\",\r\n    \"flag\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/api/v1/rates/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"v1",
+										"rates",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "monedero",
+					"item": [
+						{
+							"name": "Obtener por idYankiBc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9030/kafka/findAllFindIdWalletBc/62e056bcb91e2c4395380586",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9030",
+									"path": [
+										"kafka",
+										"findAllFindIdWalletBc",
+										"62e056bcb91e2c4395380586"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear monedero bootcoin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 0,\r\n    \"idClient\": \"62d6e6c3a912b15b63bdec01\",\r\n    \"numberPhone\":\"935652488\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/kafka/publish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"kafka",
+										"publish"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Enviar solicitud para cambiar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 100,\r\n    \"typePay\": \"YANKI\",\r\n    \"flag\":1,\r\n    \"idWallteBc\":\"62e056bcb91e2c4395380586\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9020/kafka/publish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9020",
+									"path": [
+										"kafka",
+										"publish"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "publish",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"flag\": 1,\r\n    \"requestQueueBc\": {\r\n         \"id\": \"62e08a302720f27d35f64c02\",\r\n        \"date\": \"2022-07-07\",\r\n        \"amount\": 5,\r\n        \"typePay\": \"YANKI\",\r\n        \"flag\": 1,\r\n        \"idWallteBc\": \"62e056bcb91e2c4395380586\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9030/kafka/publish",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9030",
+									"path": [
+										"kafka",
+										"publish"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener transacciones por idWallteBc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9030/kafka/findAllFindIdWalletBc/62e056bcb91e2c4395380586",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9030",
+									"path": [
+										"kafka",
+										"findAllFindIdWalletBc",
+										"62e056bcb91e2c4395380586"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "VENDEDOR",
+					"item": [
+						{
+							"name": "Listar venderor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8087/api/v1/sellerUserBc/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"v1",
+										"sellerUserBc",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear vendedor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tipoCambio\":3.90,\r\n    \"tipo\":\"COMPRA\",\r\n    \"flag\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8087/api/v1/sellerUser/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8087",
+									"path": [
+										"api",
+										"v1",
+										"sellerUser",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
